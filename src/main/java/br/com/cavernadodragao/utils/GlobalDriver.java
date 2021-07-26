@@ -14,7 +14,18 @@ public class GlobalDriver {
         return driver;
     }
 
-    public static WebDriver getBrowser(){
+    public static WebDriver getDriver(){
         return driver;
+    }
+
+    public static void maximizeWindow() {
+        driver.manage().window().maximize();
+    }
+
+    public static void closeDriver() throws Exception {
+        if (driver != null) {
+            driver.close();
+            driver = null;
+        }
     }
 }
