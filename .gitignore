@@ -1,3 +1,5 @@
 # Arquivos para serem ignorados
 /.idea
 /target
+/chromedriver.exe
+/src/main/java/br/com/cavernadodragao/utils/Environments.java
