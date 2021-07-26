@@ -1,4 +1,4 @@
 package br.com.cavernadodragao.questions;
 
-public class CommonQuestions {
+public abstract class CommonQuestions {
 }
