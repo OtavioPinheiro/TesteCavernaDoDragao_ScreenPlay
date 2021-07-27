@@ -1,6 +1,6 @@
 package br.com.cavernadodragao.steps;
 
-import br.com.cavernadodragao.components.HomeComponent;
+import br.com.cavernadodragao.components.HomeComponents;
 import br.com.cavernadodragao.questions.HomeQuestions;
 import br.com.cavernadodragao.utils.GlobalDriver;
 import br.com.cavernadodragao.utils.helpers.Wait;
@@ -13,7 +13,7 @@ import org.openqa.selenium.WebDriver;
 public class HomeSteps {
 
     private final WebDriver webDriver;
-    private HomeComponent homeComponent;
+    private HomeComponents homeComponents;
     private HomeQuestions homeQuestions;
     private Wait wait;
 
@@ -23,30 +23,30 @@ public class HomeSteps {
 
     public HomeSteps() throws Exception {
         webDriver = GlobalDriver.getDriver();
-        homeComponent = new HomeComponent(webDriver);
+        homeComponents = new HomeComponents(webDriver);
         homeQuestions = new HomeQuestions();
         wait = new Wait(webDriver);
     }
 
     @Dado("que {string} acessa a aplicação da Caverna do Dragão")
     public void queAcessaAAplicaçãoDaCavernaDoDragão(String playerName) throws Exception {
-        homeComponent.startApplication();
-        wait.waitForElement(homeComponent.title);
-        homeQuestions.hasDisplayedElement(homeComponent.title);
+        homeComponents.startApplication();
+        wait.waitForElement(homeComponents.title);
+        homeQuestions.hasDisplayedElement(homeComponents.title);
     }
 
     @Quando("ele informa um nome")
     public void eleInformaUmNome(String playerName) throws Exception {
-        homeComponent.informThePlayerName(playerName);
+        homeComponents.informThePlayerName(playerName);
     }
 
     @E("clica em jogar")
     public void clicaEmJogar() throws Exception{
-        homeComponent.clickInTheElement(homeComponent.playButton);
+        homeComponents.clickInTheElement(homeComponents.playButton);
     }
 
     @Então("ele deve visualizar a primeira página do Quiz")
     public void eleDeveVisualizarAPrimeiraPáginaDoQuiz() throws Exception{
-        homeQuestions.hasNotDisplayedElement(homeComponent.title);
+        homeQuestions.hasNotDisplayedElement(homeComponents.title);
     }
 }

@@ -7,11 +7,11 @@ import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class HomeComponent extends HomeActions {
+public class HomeComponents extends HomeActions {
 
     public WebDriver webDriver;
 
-    public HomeComponent(WebDriver web) throws Exception {
+    public HomeComponents(WebDriver web) throws Exception {
         this.webDriver = web;
         PageFactory.initElements(web, this);
     }
