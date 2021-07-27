@@ -27,6 +27,8 @@ public class QuizSteps {
     }
 
     @Dado("que o titulo {string} {string} esteja na tela")
-    public void queOTituloPerguntaEstejaNaTela(String questionNum, String question) {
+    public void queOTituloPerguntaEstejaNaTela(String questionNum, String question) throws Exception {
+        int num = Integer.parseInt(questionNum);
+        quizQuestions.hasDisplayedElement(quizComponents.getQuestionsList().get(num));
     }
 }
