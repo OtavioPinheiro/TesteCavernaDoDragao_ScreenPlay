@@ -26,8 +26,7 @@ public class QuizSteps {
         wait = new Wait(webDriver);
     }
 
-    @Dado("que o titulo {string} esteja na tela")
-    public void queOTituloEstejaNaTela(String title) {
-
+    @Dado("que o titulo {string} {string} esteja na tela")
+    public void queOTituloPerguntaEstejaNaTela(String questionNum, String question) {
     }
 }
