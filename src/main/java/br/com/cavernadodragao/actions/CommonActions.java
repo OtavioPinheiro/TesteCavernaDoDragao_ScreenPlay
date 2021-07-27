@@ -7,19 +7,26 @@ import org.openqa.selenium.WebElement;
 
 public abstract class CommonActions {
     private final WebDriver web = GlobalDriver.getDriver();
+    Wait wait = new Wait(web);
 
     public CommonActions() throws Exception {
-
     }
 
     public void startApplication() throws Exception {
         String url = "https://cavernadodragaoquiz-otaviopinheiro.vercel.app/";
-        Wait wait = new Wait(web);
         web.get(url);
         wait.waitSeconds(3);
     }
 
     public void clickInTheElement(WebElement element) throws Exception {
+        wait.waitSeconds(1);
         element.click();
+    }
+
+    public void clickInTheElementUntilEnable(WebElement element) throws Exception {
+        do {
+            wait.waitSeconds(1);
+            element.click();
+        } while (element.isEnabled());
     }
 }

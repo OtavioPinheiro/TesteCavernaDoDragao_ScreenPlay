@@ -10,14 +10,14 @@ public class Hooks {
 //    PickleStepTestStep currentStep;
 //    private int counter = 0;
 
-    @Before
-    public void beforeEveryScenario(Scenario scenario) throws Exception {
-        GlobalDriver.getDriver();
-        GlobalDriver.maximizeWindow();
-    }
-
-    @After
-    public void afterEveryScenario() throws  Exception {
-        GlobalDriver.closeDriver();
-    }
+//    @Before
+//    public void beforeEveryScenario(Scenario scenario) throws Exception {
+//        GlobalDriver.getDriver();
+//        GlobalDriver.maximizeWindow();
+//    }
+//
+//    @After
+//    public void afterEveryScenario() throws  Exception {
+//        GlobalDriver.closeDriver();
+//    }
 }

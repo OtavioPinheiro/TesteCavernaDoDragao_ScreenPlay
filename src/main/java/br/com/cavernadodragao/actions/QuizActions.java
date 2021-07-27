@@ -2,6 +2,7 @@ package br.com.cavernadodragao.actions;
 
 import br.com.cavernadodragao.components.QuizComponents;
 import br.com.cavernadodragao.utils.GlobalDriver;
+import br.com.cavernadodragao.utils.helpers.Wait;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -16,11 +17,8 @@ public class QuizActions extends CommonActions{
     public QuizActions() throws Exception {
     }
 
-    public void answerQuestionsFromTheQuiz(WebElement questionElement) throws Exception {
-        for (int i = 0; i < 15; i++) {
-            if (questionElement == quizComponents.getQuestionsList().get(i)) {
-                quizComponents.getAnswersList().get(i).click();
-            }
-        }
+    public void answerQuestionsFromTheQuiz(WebElement element) throws Exception {
+        quizComponents = new QuizComponents(web);
+        quizComponents.clickInTheElement(element);
     }
 }

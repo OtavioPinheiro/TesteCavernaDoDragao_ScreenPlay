@@ -29,19 +29,19 @@ public class QuizSteps {
         wait = new Wait(webDriver);
     }
 
-    @Dado("que o titulo {string} {string} esteja na tela")
-    public void queOTituloPerguntaEstejaNaTela(String questionNum, String question) throws Exception {
-        int num = Integer.parseInt(questionNum);
-        wait.waitForElement(quizComponents.getQuestionsList().get(num));
-        quizQuestions.hasDisplayedElement(quizComponents.getQuestionsList().get(num));
-        Assert.assertEquals(question, quizComponents.getQuestionsList().get(num).getText());
+    @Dado("que o titulo {int} {string} esteja na tela")
+    public void queOTituloPerguntaEstejaNaTela(int questionNum, String question) throws Exception {
+//        int num = Integer.parseInt(questionNum);
+        wait.waitForElement(quizComponents.getQuestionsList().get(questionNum - 1));
+        quizQuestions.hasDisplayedElement(quizComponents.getQuestionsList().get(questionNum - 1));
+        Assert.assertEquals(question, quizComponents.getQuestionsList().get(questionNum - 1).getText());
     }
 
-    @Entao("clicar na alternativa {string} correta da pergunta {string}")
-    public void clicarNaAlternativaCorretaDaPergunta(String answer, String questionNum) {
-        int num = Integer.parseInt(questionNum);
-        Assert.assertEquals(answer, quizComponents.getAnswersList().get(num).getText());
-        quizComponents.getAnswersList().get(num).click();
+    @Entao("clicar na alternativa {string} correta da pergunta {int} {string}")
+    public void clicarNaAlternativaCorretaDaPergunta(String answer, int questionNum, String question) throws Exception {
+//        int num = Integer.parseInt(questionNum);
+        Assert.assertEquals(answer, quizComponents.getAnswersList().get(questionNum - 1).getText());
+        quizComponents.answerQuestionsFromTheQuiz(quizComponents.getAnswersList().get(questionNum - 1));
     }
 
     @E("clicar em {string}")

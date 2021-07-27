@@ -14,9 +14,9 @@ Funcionalidade: Quiz
     Então ele deve visualizar a primeira página do Quiz
 
   Esquema do Cenário: Responder o Quiz até o final
-    Dado que o titulo "<pergunta>" "Pergunta <pergunta> de 15" esteja na tela
-    Entao clicar na alternativa "<resposta>" correta da pergunta "<pergunta>"
-    E clicar em "Confirmar"
+    Dado que o titulo <pergunta> "Pergunta <pergunta> de 15" esteja na tela
+    Entao clicar na alternativa "<resposta>" correta da pergunta <pergunta> "Pergunta <pergunta> de 15"
+    E clicar em "CONFIRMAR"
 
     Exemplos:
       | pergunta | resposta                                                                                                                          |

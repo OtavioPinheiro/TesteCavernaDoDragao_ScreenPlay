@@ -1,5 +1,6 @@
 package br.com.cavernadodragao.utils.helpers;
 
+import br.com.cavernadodragao.utils.GlobalDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -9,6 +10,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Wait {
+
     WebDriver web;
     String correctElement;
     String correctElementTypeExtracted;
@@ -48,7 +50,7 @@ public class Wait {
         correctElement = elementNameWithoutExtraChars.substring(0);
         System.out.println(correctElement);
 
-        Pattern pattern = Pattern.compile(".+?(>.*:).+");
+        Pattern pattern = Pattern.compile(".+?([>.].*:).+");
         Matcher matcher = pattern.matcher(elementAsString);
         if (matcher.matches()) {
             System.out.println(matcher.group(1));
@@ -65,6 +67,6 @@ public class Wait {
     }
 
     public void waitSeconds(int seconds) throws InterruptedException {
-       Thread.sleep(seconds * 1_000);
+       Thread.sleep(seconds * 1_000L);
     }
 }
