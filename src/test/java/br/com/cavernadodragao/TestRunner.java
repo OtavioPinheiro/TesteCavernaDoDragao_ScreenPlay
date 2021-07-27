@@ -11,6 +11,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "./src/main/java/br/com/cavernadodragao/requirements",
         glue = "br.com.cavernadodragao.steps",
+        plugin = {"pretty", "html:src/test/java/relatorios/relatorio.html"},
         monochrome = true
 )
 

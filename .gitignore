@@ -2,4 +2,4 @@
 /.idea
 /target
 /chromedriver.exe
-/src/main/java/br/com/cavernadodragao/utils/Environments.java
+/src/test/java/relatorios/
