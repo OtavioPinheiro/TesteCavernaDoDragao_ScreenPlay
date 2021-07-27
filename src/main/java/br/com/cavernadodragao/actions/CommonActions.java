@@ -3,6 +3,7 @@ package br.com.cavernadodragao.actions;
 import br.com.cavernadodragao.utils.GlobalDriver;
 import br.com.cavernadodragao.utils.helpers.Wait;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 public abstract class CommonActions {
     private final WebDriver web = GlobalDriver.getDriver();
@@ -16,5 +17,9 @@ public abstract class CommonActions {
         Wait wait = new Wait(web);
         web.get(url);
         wait.wait(3_000);
+    }
+
+    public void clickInTheElement(WebElement element) throws Exception {
+        element.click();
     }
 }

@@ -8,7 +8,8 @@ Funcionalidade: Quiz
     Dado que "Otávio" acessa a aplicação da Caverna do Dragão
 
   Cenário: Informar o nome
-    Quando ele informa um nome válido
+    Quando ele informa um nome
+    E clica em jogar
     Então ele deve visualizar a primeira página do Quiz
 
   Esquema do Cenário: Responder o Quiz até o final

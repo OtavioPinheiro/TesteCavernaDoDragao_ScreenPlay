@@ -15,6 +15,5 @@ public class HomeActions extends CommonActions{
     public void informThePlayerName(String playerName) throws Exception {
         homeComponent = new HomeComponent(web);
         homeComponent.nameField.sendKeys(playerName);
-        homeComponent.playButton.click();
     }
 }
