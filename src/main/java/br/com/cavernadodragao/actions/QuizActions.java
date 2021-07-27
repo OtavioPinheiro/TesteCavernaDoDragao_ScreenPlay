@@ -2,12 +2,8 @@ package br.com.cavernadodragao.actions;
 
 import br.com.cavernadodragao.components.QuizComponents;
 import br.com.cavernadodragao.utils.GlobalDriver;
-import br.com.cavernadodragao.utils.helpers.Wait;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class QuizActions extends CommonActions{
 

@@ -41,6 +41,9 @@ public class QuizSteps {
     public void clicarNaAlternativaCorretaDaPergunta(String answer, int questionNum, String question) throws Exception {
 //        int num = Integer.parseInt(questionNum);
         Assert.assertEquals(answer, quizComponents.getAnswersList().get(questionNum - 1).getText());
+        if (questionNum == 11) {
+            quizComponents.answerQuestionsFromTheQuiz(quizComponents.forms);
+        }
         quizComponents.answerQuestionsFromTheQuiz(quizComponents.getAnswersList().get(questionNum - 1));
     }
 
