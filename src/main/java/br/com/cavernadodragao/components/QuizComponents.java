@@ -7,6 +7,9 @@ import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class QuizComponents extends QuizActions {
 
     public WebDriver webDriver;
@@ -16,134 +19,174 @@ public class QuizComponents extends QuizActions {
         PageFactory.initElements(web, this);
     }
 
+    public List<WebElement> getQuestionsList() {
+        List<WebElement> questions = new ArrayList<>();
+        questions.add(question1);
+        questions.add(question2);
+        questions.add(question3);
+        questions.add(question4);
+        questions.add(question5);
+        questions.add(question6);
+        questions.add(question7);
+        questions.add(question8);
+        questions.add(question9);
+        questions.add(question10);
+        questions.add(question11);
+        questions.add(question12);
+        questions.add(question13);
+        questions.add(question14);
+        questions.add(question15);
+        return questions;
+    }
+
+    public List<WebElement> getAnswersList() {
+        List<WebElement> answers = new ArrayList<>();
+        answers.add(answer1);
+        answers.add(answer2);
+        answers.add(answer3);
+        answers.add(answer4);
+        answers.add(answer5);
+        answers.add(answer6);
+        answers.add(answer7);
+        answers.add(answer8);
+        answers.add(answer9);
+        answers.add(answer10);
+        answers.add(answer11);
+        answers.add(answer12);
+        answers.add(answer13);
+        answers.add(answer14);
+        answers.add(answer15);
+        return answers;
+    }
+
     @FindBy(xpath = "//h3[contains(text(), 'Pergunta 1 de 15')]")
     @CacheLookup
-    WebElement question1;
+    public WebElement question1;
 
     @FindBy(xpath = "//h3[contains(text(), 'Pergunta 2 de 15')]")
     @CacheLookup
-    WebElement question2;
+    public WebElement question2;
 
     @FindBy(xpath = "//h3[contains(text(), 'Pergunta 3 de 15')]")
     @CacheLookup
-    WebElement question3;
+    public WebElement question3;
 
     @FindBy(xpath = "//h3[contains(text(), 'Pergunta 4 de 15')]")
     @CacheLookup
-    WebElement question4;
+    public WebElement question4;
 
     @FindBy(xpath = "//h3[contains(text(), 'Pergunta 5 de 15')]")
     @CacheLookup
-    WebElement question5;
+    public WebElement question5;
 
     @FindBy(xpath = "//h3[contains(text(), 'Pergunta 6 de 15')]")
     @CacheLookup
-    WebElement question6;
+    public WebElement question6;
 
     @FindBy(xpath = "//h3[contains(text(), 'Pergunta 7 de 15')]")
     @CacheLookup
-    WebElement question7;
+    public WebElement question7;
 
     @FindBy(xpath = "//h3[contains(text(), 'Pergunta 8 de 15')]")
     @CacheLookup
-    WebElement question8;
+    public WebElement question8;
 
     @FindBy(xpath = "//h3[contains(text(), 'Pergunta 9 de 15')]")
     @CacheLookup
-    WebElement question9;
+    public WebElement question9;
 
     @FindBy(xpath = "//h3[contains(text(), 'Pergunta 10 de 15')]")
     @CacheLookup
-    WebElement question10;
+    public WebElement question10;
 
     @FindBy(xpath = "//h3[contains(text(), 'Pergunta 11 de 15')]")
     @CacheLookup
-    WebElement question11;
+    public WebElement question11;
 
     @FindBy(xpath = "//h3[contains(text(), 'Pergunta 12 de 15')]")
     @CacheLookup
-    WebElement question12;
+    public WebElement question12;
 
     @FindBy(xpath = "//h3[contains(text(), 'Pergunta 13 de 15')]")
     @CacheLookup
-    WebElement question13;
+    public WebElement question13;
 
     @FindBy(xpath = "//h3[contains(text(), 'Pergunta 14 de 15')]")
     @CacheLookup
-    WebElement question14;
+    public WebElement question14;
 
     @FindBy(xpath = "//h3[contains(text(), 'Pergunta 15 de 15')]")
     @CacheLookup
-    WebElement question15;
+    public WebElement question15;
 
     @FindBy(xpath = "//label[contains(text(), 'um jogo de RPG chamado Dungeons and Dragons')]")
     @CacheLookup
-    WebElement answer1;
+    public WebElement answer1;
 
     @FindBy(xpath = "//label[contains(text(), 'Hank, Bobby, Eric, Presto, Sheila e Diana')]")
     @CacheLookup
-    WebElement answer2;
+    public WebElement answer2;
 
     @FindBy(xpath = "//label[contains(text(), 'Hank')]")
     @CacheLookup
-    WebElement answer3;
+    public WebElement answer3;
 
     @FindBy(xpath = "//label[contains(text(), 'Era a unicórnio que sempre andava ao lado de Bobby')]")
     @CacheLookup
-    WebElement answer4;
+    public WebElement answer4;
 
     @FindBy(xpath = "//label[contains(text(), 'Era o principal antagonista da série. " +
             "Era um feiticeiro maléfico com grandes habilidades místicas.')]")
     @CacheLookup
-    WebElement answer5;
+    public WebElement answer5;
 
     @FindBy(xpath = "//label[contains(text(), 'Nenhum dos protagonistas principais empunhava uma espada')]")
     @CacheLookup
-    WebElement answer6;
+    public WebElement answer6;
 
     @FindBy(xpath = "//label[contains(text(), 'Era a acrobata e possuia um bastão mágico como arma')]")
     @CacheLookup
-    WebElement answer7;
+    public WebElement answer7;
 
     @FindBy(xpath = "//label[contains(text(), 'Era uma das antagonistas da série. " +
             "Era uma Deusa Dragoa de cinco cabeças e guardiã do cemitério dos dragões')]")
     @CacheLookup
-    WebElement answer8;
+    public WebElement answer8;
 
     @FindBy(xpath = "//label[contains(text(), 'Era a irmã mais velha do Bobby e usava uma capa da invisibilidade')]")
     @CacheLookup
-    WebElement answer9;
+    public WebElement answer9;
 
     @FindBy(xpath = "//label[contains(text(), 'Era um poderoso mago e guia para os protagonistas, " +
             "lhes dando armas no início da aventura e tentando ajudá-los a voltar para casa')]")
     @CacheLookup
-    WebElement answer10;
+    public WebElement answer10;
 
     @FindBy(xpath = "//label[contains(text(), 'Eric, Diana, Bobby e Presto')]")
     @CacheLookup
-    WebElement answer11;
+    public WebElement answer11;
 
     @FindBy(xpath = "//label[contains(text(), '27 episódios e 3 temporadas')]")
     @CacheLookup
-    WebElement answer12;
+    public WebElement answer12;
 
     @FindBy(xpath = "//label[contains(text(), 'Entraram em um portal que apareceu durante o passeio na montanha russa')]")
     @CacheLookup
-    WebElement answer13;
+    public WebElement answer13;
 
     @FindBy(xpath = "//label[contains(text(), 'Em 1986')]")
     @CacheLookup
-    WebElement answer14;
+    public WebElement answer14;
 
     @FindBy(xpath = "//label[contains(text(), 'Vingador')]")
     @CacheLookup
-    WebElement answer15;
+    public WebElement answer15;
 
     @FindBy(xpath = "//button[contains(text(), 'Confirmar')]")
     @CacheLookup
-    WebElement confirmButton;
+    public WebElement confirmButton;
 
     @FindBy(xpath = "//form[contains(@class, 'AlternativesForm')]")
     @CacheLookup
-    WebElement forms;
+    public WebElement forms;
 }
