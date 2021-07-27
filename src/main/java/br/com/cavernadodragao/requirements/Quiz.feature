@@ -4,11 +4,12 @@ Funcionalidade: Quiz
   Otavio deseja acessar o quiz
   Para que ele possa se divertir
 
-  Cenário de Fundo:
-    Dado que "Otávio" acessa a aplicação da Caverna do Dragão
+#  Cenário de Fundo:
+#    Dado que "Otávio" acessa a aplicação da Caverna do Dragão
 
   Cenário: Informar o nome
-    Quando ele informa um nome
+    Dado que "Otávio" acessa a aplicação da Caverna do Dragão
+    Quando ele informa um nome "Otavio"
     E clica em jogar
     Então ele deve visualizar a primeira página do Quiz
 
@@ -33,7 +34,7 @@ Funcionalidade: Quiz
       | 12       | 27 episódios e 3 temporadas                                                                                                       |
       | 13       | Entraram em um portal que apareceu durante o passeio na montanha russa                                                            |
       | 14       | Em 1986                                                                                                                           |
-      | 15       | Vingador
+      | 15       | Vingador                                                                                                                          |
 
   Cenario: Verificar página de resultados
     Quando ele estiver na pagina de resultados

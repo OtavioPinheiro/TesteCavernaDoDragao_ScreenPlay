@@ -8,7 +8,7 @@ public abstract class CommonQuestions {
         return element.isDisplayed();
     }
 
-    public boolean hasNotDisplayedElement(WebElement element) throws Exception {
-        return !element.isDisplayed();
-    }
+//    public boolean hasNotDisplayedElement(WebElement element) throws Exception {
+//        return !element.isDisplayed();
+//    }
 }

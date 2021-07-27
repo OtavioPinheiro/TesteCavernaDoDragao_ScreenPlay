@@ -42,11 +42,13 @@ public class Wait {
 
     private void convertWebElementToString(WebElement element) {
         String elementAsString = element.toString();
-        String elementNameExtracted = elementAsString.replaceAll("(.*\\:\\s)", "");
+        System.out.println(elementAsString);
+        String elementNameExtracted = elementAsString.replaceAll("(.*: )", "");
         String elementNameWithoutExtraChars = elementNameExtracted.substring(0, elementNameExtracted.length() - 1);
-        correctElement = elementNameWithoutExtraChars.substring(1);
+        correctElement = elementNameWithoutExtraChars.substring(0);
+        System.out.println(correctElement);
 
-        Pattern pattern = Pattern.compile(".+?(\\$.*\\:).+");
+        Pattern pattern = Pattern.compile(".+?(>.*:).+");
         Matcher matcher = pattern.matcher(elementAsString);
         if (matcher.matches()) {
             System.out.println(matcher.group(1));
@@ -57,8 +59,12 @@ public class Wait {
     }
 
     public void waitForElement(WebElement element) {
-        int implicitlyWait = 50;
+        int implicitlyWait = 5;
         convertWebElementToString(element);
         findByTypeOfElementBasedOnType(web, correctElementTypeExtracted, correctElement, implicitlyWait);
+    }
+
+    public void waitSeconds(int seconds) throws InterruptedException {
+       Thread.sleep(seconds * 1_000);
     }
 }

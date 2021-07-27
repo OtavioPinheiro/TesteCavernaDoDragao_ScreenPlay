@@ -16,7 +16,7 @@ public abstract class CommonActions {
         String url = "https://cavernadodragaoquiz-otaviopinheiro.vercel.app/";
         Wait wait = new Wait(web);
         web.get(url);
-        wait.wait(3_000);
+        wait.waitSeconds(3);
     }
 
     public void clickInTheElement(WebElement element) throws Exception {

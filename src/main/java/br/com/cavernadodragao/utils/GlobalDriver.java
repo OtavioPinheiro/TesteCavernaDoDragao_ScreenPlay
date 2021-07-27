@@ -19,7 +19,7 @@ public class GlobalDriver {
     }
 
     public static void maximizeWindow() {
-        driver.manage().window().maximize();
+//        driver.manage().window().maximize();
     }
 
     public static void closeDriver() throws Exception {
