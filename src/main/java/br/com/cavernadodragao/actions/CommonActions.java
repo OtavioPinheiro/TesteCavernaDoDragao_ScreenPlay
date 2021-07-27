@@ -15,7 +15,7 @@ public abstract class CommonActions {
     public void startApplication() throws Exception {
         String url = "https://cavernadodragaoquiz-otaviopinheiro.vercel.app/";
         web.get(url);
-        wait.waitSeconds(3);
+        wait.waitSeconds(2);
     }
 
     public void clickInTheElement(WebElement element) throws Exception {
@@ -29,4 +29,8 @@ public abstract class CommonActions {
             element.click();
         } while (element.isEnabled());
     }
+
+//    public void closeApplication() throws Exception {
+//
+//    }
 }

@@ -1,4 +1,5 @@
 package br.com.cavernadodragao.questions;
 
-public class ResultQuestions {
+public class ResultQuestions extends CommonQuestions{
+
 }

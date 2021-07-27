@@ -3,6 +3,7 @@ package br.com.cavernadodragao;
 import br.com.cavernadodragao.utils.GlobalDriver;
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
+import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.runner.RunWith;
 
@@ -18,5 +19,10 @@ public class TestRunner {
     @BeforeClass
     public static void oneTimeSetup() throws Exception {
         GlobalDriver.initiateDriver();
+    }
+
+    @AfterClass
+    public static void oneTimeSetupEnd() throws Exception {
+        GlobalDriver.closeDriver();
     }
 }
